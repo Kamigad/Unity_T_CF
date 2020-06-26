@@ -27,8 +27,12 @@ public class Spawn : MonoBehaviour
             // Dado a que el Instatiate al ser llamada nos retorna un objeto, este lo convertiremos en GameObject y lo almacenaremos en una variable, la cual le daremos 
             // nombre y contaremos cuantos se generan para tener mejor control en la escena
             // Funcion Destroy, se encargara de destruir el gameobject cube y cuanto cumpla el lapso de tiempo dado, 3f
+            // Para llamar el componente que hay en el script Physics, creamos un varaiable cuyo tipo sera el nombre del script, y el gameobject sera al cual se vera 
+            // afectado determinado componente, en este caso, el cube
             GameObject cube = Instantiate(prefab, transform.position, transform.rotation) as GameObject ;
             cube.name = "Cubo" + " " +count++;
+            Physics physics = cube.GetComponent<Physics>();
+            physics.Shoot();
             Destroy(cube, 3f);
         }
     }
