@@ -10,8 +10,9 @@ public class Physics : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    // Funcion que es llamada mas de una vez en cada frame, con esta funcion no es necesario multiplicar por Time.deltaTime
+    // ademas, cada vez que usemos o implementemos fisicas debe ser dentro de FixedUpdate
+    void FixedUpdate()
     {
         // Por medio del Rigidbody podremos mover de forma continua teniendo en cuenta su masa al gameobject
         GetComponent<Rigidbody>().AddForce(Vector3.up * 50f, ForceMode.Force);
