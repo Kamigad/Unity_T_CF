@@ -7,14 +7,8 @@ public class Physics : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // uso de fisicas impulsando el objeto de forma inmediata en base a su masa
+        GetComponent<Rigidbody>().AddForce(Vector3.forward * 100f, ForceMode.Impulse);
     }
 
-    // Funcion que es llamada mas de una vez en cada frame, con esta funcion no es necesario multiplicar por Time.deltaTime
-    // ademas, cada vez que usemos o implementemos fisicas debe ser dentro de FixedUpdate
-    void FixedUpdate()
-    {
-        // Por medio del Rigidbody podremos mover de forma continua teniendo en cuenta su masa al gameobject
-        GetComponent<Rigidbody>().AddForce(Vector3.up * 50f, ForceMode.Force);
-    }
 }
