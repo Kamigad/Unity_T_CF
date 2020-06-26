@@ -5,13 +5,17 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     // variable de tipo float que usare para rotar el GameObject
-    float deltaRotation= 30f;
-    float deltaMovement = 10f;
+    // con el public ahora nuestrsa variables podran ser vistas y modificadas desde Unity
+    // creamos una variable de tipo color que se encargara de darle un color al meterial de nuestro objeto
+    public float deltaRotation= 30f;
+    public float deltaMovement = 10f;
+    public Color color;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //con es linea el material de nuestro objeto tomara el colo que queramos desde el inspecto y se lo pasara a nuestro objeto
+        GetComponent<Renderer>().material.color = color;
     }
 
     // Update is called once per frame

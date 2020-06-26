@@ -153,6 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e58d107a24108419ef42807e7ebd72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deltaRotation: 30
+  deltaMovement: 10
+  color: {r: 0.31941974, g: 0.34110013, b: 0.6981132, a: 0}
 --- !u!65 &376702259
 BoxCollider:
   m_ObjectHideFlags: 0
