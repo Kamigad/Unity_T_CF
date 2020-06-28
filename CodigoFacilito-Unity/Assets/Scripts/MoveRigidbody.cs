@@ -51,4 +51,9 @@ public class MoveRigidbody : MonoBehaviour
         Debug.Log(collision.gameObject.name);
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.gameObject.name);
+    }
 }
